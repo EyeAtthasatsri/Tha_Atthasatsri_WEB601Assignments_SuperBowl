@@ -1,9 +1,7 @@
-
-
 // content-list.ts
 import Content from './content-interface';
 
-class Contentlist {
+export class Contentlist {
     static contentCount = 0
     private _items: Content[];
 
@@ -12,7 +10,7 @@ class Contentlist {
     }
 
 
-    getItems() : Content[] {
+    get Items() : Content[] {
         return this._items;
     }
 
@@ -26,15 +24,19 @@ class Contentlist {
         <p>Description: ${content.description}</p>
         <p>Creator: ${content.creator}</p>
         <p>Type: ${content.type}</p>
-        <p>Img: ${content.imgUrl}</p>
+        // <p>Img: ${content.imgUrl}</p>
+        <img src = ${content.imgUrl}></img>
         <p>Tag: ${content.tags}</p>
         `
     }
 
     increaseCount(): number {
-    return ++ContentList.contentCount;
+    return ++Contentlist.contentCount;
   }
 
+  addContent(contentItem: Content): void {
+    this._items.push(contentItem);
+  }
 
 }
 
