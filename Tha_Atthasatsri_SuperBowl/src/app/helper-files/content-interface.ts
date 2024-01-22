@@ -5,7 +5,9 @@ interface Content{
     title: string;
     description: string;
     creator: string;
-    imageUrl?: string;
+    imgUrl?: string;
     type?: string;
-    tag?: string;
+    tags?: string;
     }
+
+export default Content;
