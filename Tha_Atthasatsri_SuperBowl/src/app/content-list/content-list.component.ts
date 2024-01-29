@@ -62,6 +62,15 @@ export class ContentListComponent implements OnInit{
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/2/2e/Super_Bowl_LIII_logo.png",
         type:"American football",
         tags: ["National Football League","American Football Conference"]
+      },
+      {
+        id: 6,
+        title: "Super Bowl (2018)",
+        description: "Super Bowl LII",
+        creator:"NBC broadcast",
+        imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Super_Bowl_LII_logo.svg/1200px-Super_Bowl_LII_logo.svg.png",
+        type:"American football",
+        tags: ["National Football League","American Football Conference"]
       }
     ]
   }
