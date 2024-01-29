@@ -12,6 +12,9 @@ import { Component } from '@angular/core';
   styleUrl: './content-card.component.scss'
 })
 export class ContentCardComponent {
+
+
+  
   // contentList: Contentlist = new Contentlist();
 
   

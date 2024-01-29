@@ -25,7 +25,7 @@ export class ContentListComponent implements OnInit{
         creator:"Fox, Fox Deportes.",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Super_Bowl_LVII.svg/360px-Super_Bowl_LVII.svg.png",
         type:"American football",
-        tags: "NFL"
+        tags: ["National Football League","American Football Conference"]
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ export class ContentListComponent implements OnInit{
         creator:"NBC, Telemundo",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png",
         type:"American football",
-        tags: "NFL"
+        tags: ["National Football League","American Football Conference"]
       },
       {
         id: 3,
@@ -43,7 +43,7 @@ export class ContentListComponent implements OnInit{
         creator:"CBS, ESPN Deportes",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/6/69/Super_Bowl_LV.png", 
         type:"American football",
-        tags: "NFL"
+        tags: ["National Football League","American Football Conference"]
       },
       {
         id: 4,
@@ -52,7 +52,7 @@ export class ContentListComponent implements OnInit{
         creator:"Demi Lovato.",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Super_Bowl_LIV.svg/1200px-Super_Bowl_LIV.svg.png",
         type:"American football",
-        tags: "NFL"
+        tags: ["National Football League","American Football Conference"]
       },
       {
         id: 5,
@@ -61,7 +61,7 @@ export class ContentListComponent implements OnInit{
         creator:"CBS, ESPN Deportes.",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/2/2e/Super_Bowl_LIII_logo.png",
         type:"American football",
-        tags: "NFL" 
+        tags: ["National Football League","American Football Conference"]
       }
     ]
   }

@@ -20,7 +20,7 @@
 
     <p *ngIf="contentItem.tags && contentItem.tags.length > 0">
         <strong>Tags:</strong> 
-        {{ contentItem.tags }}
+        {{ contentItem.tags.join(', ') }}
     </p>
  
 </div>
