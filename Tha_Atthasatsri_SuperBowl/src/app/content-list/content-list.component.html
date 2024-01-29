@@ -1,7 +1,8 @@
 <div *ngFor="let contentItem of contentList; 
-            let isFirst = first" class="content-card" [class.first-item]="isFirst">
+            let isFirst = first" 
+            class="content-card" [class.first-item]="isFirst">
 
-    <img [src]="contentItem.imgUrl" class="content-card-image" height="250px" width="200px">
+    <img [src]="contentItem.imgUrl" class="content-card-image" height="250px" width="200px" (click)="showContentIdTitle(contentItem)">
 
     <h2>{{ contentItem.title }}</h2>
     <p><strong>Description:</strong> 

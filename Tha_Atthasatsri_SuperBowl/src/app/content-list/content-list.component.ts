@@ -76,5 +76,10 @@ export class ContentListComponent implements OnInit{
   }
 
 
+  // Add cursor showm when users touch.
+  showContentIdTitle(contentList:Content): void {
+    console.log(`ID: ${contentList.id}, Title: ${contentList.title}`);
+  }
+
 
 }
