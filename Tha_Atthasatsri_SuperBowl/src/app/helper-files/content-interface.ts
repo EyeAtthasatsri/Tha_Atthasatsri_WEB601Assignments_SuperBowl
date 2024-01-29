@@ -1,6 +1,5 @@
 
-
-interface Content{
+export interface Content{
     id: number;
     title: string;
     description: string;
@@ -8,6 +7,4 @@ interface Content{
     imgUrl?: string;
     type?: string;
     tags?: string;
-    }
-
-export default Content;
+}
