@@ -1,23 +1,51 @@
 import { CommonModule } from '@angular/common';
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
-
+  // ---------------- Add ass3
+import { ContentCardComponent } from '../content-card/content-card.component';
+import { ContentTypeFilterPipe } from '../content-type-filter.pipe';
+import { FormsModule } from '@angular/forms';
+  // ---------------- end ass3
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent implements OnInit{
-  @Input () contentList: Content[] = [];
 
+  // Add cursor showm when users touch.
+  showContentIdTitle(contentItem:Content): void {
+    console.log(`ID: ${contentItem.id}, Title: ${contentItem.title}`);
+  }
+
+
+
+  @Input () contentItems: Content[] = [];
+
+  // ---------------- Add ass3
+
+  
+  searchTitle: string = '';
+  contentExists: boolean = false;
+  message: string = '';  
+  selectedTitle: string | null = null;
+
+
+  checkContentExists() {
+    const foundItem = this.contentItems.find(item => item.title.toLowerCase() === this.searchTitle.toLowerCase());
+    this.contentExists = !!foundItem;
+    this.message = foundItem ? 'Content item exists.' : 'Content item does not exist.';
+    this.selectedTitle = foundItem ? foundItem.title : null;
+  }
+
+  // ---------------- end ass3
 
   ngOnInit(): void {
-    this.contentList = [
+    this.contentItems = [
       {
         id: 1,
         title: "Super Bowl (2023)",
@@ -42,7 +70,7 @@ export class ContentListComponent implements OnInit{
         description: "Super Bowl LV",
         creator:"CBS, ESPN Deportes",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/6/69/Super_Bowl_LV.png", 
-        // type:"American football", // different Type value as no set
+        type:" ", // different Type value as no set
         tags: ["National Football League","American Football Conference"]
       },
       {
@@ -78,17 +106,9 @@ export class ContentListComponent implements OnInit{
         description: "Super Bowl LI",
         creator:"Fox broadcast",
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Super_Bowl_LI_logo.svg/1200px-Super_Bowl_LI_logo.svg.png",
-        // type:"American football", // different Type value as no set
+        type:" ", // different Type value as no set
         tags: ["National Football League","American Football Conference"]
       }
     ]
   }
-
-
-  // Add cursor showm when users touch.
-  showContentIdTitle(contentList:Content): void {
-    console.log(`ID: ${contentList.id}, Title: ${contentList.title}`);
-  }
-
-
 }
