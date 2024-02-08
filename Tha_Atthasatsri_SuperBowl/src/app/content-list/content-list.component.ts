@@ -3,9 +3,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
   // ---------------- Add ass3
+
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { ContentTypeFilterPipe } from '../content-type-filter.pipe';
 import { FormsModule } from '@angular/forms';
+
   // ---------------- end ass3
 
 @Component({
@@ -40,7 +42,11 @@ export class ContentListComponent implements OnInit{
     this.contentExists = !!foundItem;
     this.message = foundItem ? 'Content item exists.' : 'Content item does not exist.';
     this.selectedTitle = foundItem ? foundItem.title : null;
+
   }
+
+
+  
 
   // ---------------- end ass3
 

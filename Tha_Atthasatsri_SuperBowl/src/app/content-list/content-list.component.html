@@ -14,7 +14,7 @@
 <h2>National Football</h2>
 <app-content-card *ngFor="let contentItem of contentItems | contentTypeFilter: 'National Football'" [contentItem]="contentItem"></app-content-card>
 
-<h2>Empty</h2>
+<h2>Empty as No set</h2>
 <app-content-card *ngFor="let contentItem of contentItems | contentTypeFilter: ' '" [contentItem]="contentItem"></app-content-card>
 
 
