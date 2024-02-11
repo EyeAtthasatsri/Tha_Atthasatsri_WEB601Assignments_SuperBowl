@@ -28,7 +28,7 @@ export class HoverAffectDirective{
       case 'bold':
         this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'bold');
         break;
-      case 'border':
+      case 'border': // This effect doesn't work
         this.renderer.setStyle(this.el.nativeElement.parentNode, 'border', '2px solid red');
         break;
     }
@@ -42,7 +42,7 @@ export class HoverAffectDirective{
       case 'bold':
         this.renderer.removeStyle(this.el.nativeElement, 'font-weight');
         break;
-      case 'border':
+      case 'border': // This effect doesn't work
         this.renderer.removeStyle(this.el.nativeElement.parentNode, 'border');
         break;
     }
