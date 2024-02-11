@@ -18,9 +18,46 @@
     'unspecified': !contentItem.type
   }">
 
-      <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl" alt="{{ contentItem.title }}" 
+    <!-- Ass4 -->
+
+    <!--  Add ngIf & set Defaut image -->
+
+    <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl; else defaultImage" alt="{{ contentItem.title }}" class="content-card-image" height="200px">
+    
+
+    <ng-template #defaultImage>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Super_Bowl_logo.svg/640px-Super_Bowl_logo.svg.png" alt="No set image equal Default Image" class="content-card-image" height="200px">
+    </ng-template>
+
+  
+
+    <h2>{{ contentItem.title }}</h2>
+
+          <p><strong>Description:</strong> {{ contentItem.description }}</p>
+
+          <p><strong>Creator:</strong> {{ contentItem.creator }}</p>
+
+          <p *ngIf="contentItem.type"><strong>Type: </strong>{{ contentItem.type }}</p>
+
+          <p *ngIf="contentItem.tags && contentItem.tags.length > 0"><strong>Tags:</strong> {{ contentItem.tags.join(', ') }}</p>
+    
+    <!-- End Ass4 -->
+
+  </div>
+
+    <!-- Ass 3 -->
+
+      <!-- <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl" alt="{{ contentItem.title }}" 
       class="content-card-image" height="200px" width="150px">
       
+
+      <ng-template #defaultImage>
+        <img src=" " alt="Default Image" class="content-card-image" height="200px" width="150px">
+    </ng-template>
+
+
+    
+
       <div *ngIf="contentItem.imgUrl">
         
           <h2>{{ contentItem.title }}</h2>
@@ -34,8 +71,10 @@
           <p *ngIf="contentItem.tags && contentItem.tags.length > 0"><strong>Tags:</strong> {{ contentItem.tags.join(', ') }}</p>
 
       </div>
+  end ass 3 -->
 
-  </div>
 
 
-  <!-- end ass 3 -->
+
+
+ 

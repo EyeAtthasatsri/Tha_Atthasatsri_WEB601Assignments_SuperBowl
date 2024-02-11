@@ -114,6 +114,17 @@ export class ContentListComponent implements OnInit{
         imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Super_Bowl_LI_logo.svg/1200px-Super_Bowl_LI_logo.svg.png",
         type:" ", // different Type value as no set
         tags: ["National Football League","American Football Conference"]
+      },
+
+      // Ass4 : Add ID 8, imgUrl:" " is not set
+      {
+        id: 8,
+        title: "Super Bowl (2016)",
+        description: "Super Bowl 50",
+        creator:"CBS ESPN Deportes",
+        // imgUrl:" ", is not set
+        type:"American football", // different Type value as no set
+        tags: ["National Football League","American Football Conference"]
       }
     ]
   }
