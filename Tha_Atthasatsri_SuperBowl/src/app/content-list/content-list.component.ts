@@ -8,12 +8,16 @@ import { ContentCardComponent } from '../content-card/content-card.component';
 import { ContentTypeFilterPipe } from '../content-type-filter.pipe';
 import { FormsModule } from '@angular/forms';
 
-  // ---------------- end ass3
+  // ---------------- end ass 4
+
+  import { HoverAffectDirective } from '../hover-affect.directive';
+
+  // ---------------- Add ass 4
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule],
+  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule, HoverAffectDirective],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })

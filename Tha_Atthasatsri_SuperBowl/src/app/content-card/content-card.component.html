@@ -6,19 +6,17 @@
         }
     </div>
   </div> -->
+<!-- ----------------------------------------------- -->
 
+ 
+<!-- Ass4 -->
 
-  <!-- Ass 3 Add  -->
-
-  <div
-
-    class="content-card" [ngClass]="{
+  <div class="content-card" [ngClass]="{
     'national football': contentItem.type === 'National football',
     'american football': contentItem.type === 'American football',
-    'unspecified': !contentItem.type
-  }">
-
-    <!-- Ass4 -->
+    'unspecified': !contentItem.type}">
+    
+    
 
     <!--  Add ngIf & set Defaut image -->
 
@@ -37,15 +35,35 @@
 
           <p><strong>Creator:</strong> {{ contentItem.creator }}</p>
 
-          <p *ngIf="contentItem.type"><strong>Type: </strong>{{ contentItem.type }}</p>
+          <p *ngIf="contentItem.type" appHoverAffect [affectType]="'underline'"><strong>Type: </strong>{{ contentItem.type }}</p>
 
-          <p *ngIf="contentItem.tags && contentItem.tags.length > 0"><strong>Tags:</strong> {{ contentItem.tags.join(', ') }}</p>
-    
-    <!-- End Ass4 -->
-
+          <p *ngIf="contentItem.tags && contentItem.tags.length > 0">
+            
+            <strong>Tags: </strong>
+            
+            <span *ngFor="let tag of contentItem.tags" appHoverAffect [affectType]="'bold'">{{ tag }}, </span>
+          
+          </p>
+          
+          <!-- <p *ngFor="let tag of contentItem.tags" appHoverAffect [affectType]="'bold'"><strong>Tags: </strong>{{ tag }}</p> -->
+            
   </div>
 
-    <!-- Ass 3 -->
+<!-- End Ass4 -->
+
+
+
+    <!-- Ass 3 --> 
+
+
+  <!-- <div
+
+    class="content-card" [ngClass]="{
+    'national football': contentItem.type === 'National football',
+    'american football': contentItem.type === 'American football',
+    'unspecified': !contentItem.type
+  }" appHoverAffect [affectType]="'underline'"> Apply the Hover-Affect directive here -->
+  
 
       <!-- <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl" alt="{{ contentItem.title }}" 
       class="content-card-image" height="200px" width="150px">
@@ -71,6 +89,7 @@
           <p *ngIf="contentItem.tags && contentItem.tags.length > 0"><strong>Tags:</strong> {{ contentItem.tags.join(', ') }}</p>
 
       </div>
+      
   end ass 3 -->
 
 
