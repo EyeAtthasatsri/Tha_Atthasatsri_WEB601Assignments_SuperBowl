@@ -1,0 +1,44 @@
+<!-- <p>create-content works!</p> -->
+
+
+
+
+<br><br>
+
+<hr>
+
+<div>
+    <label>ID:</label>
+    <input [(ngModel)]="content.id" type="number" required>
+  </div>
+  <div>
+    <label>Title:</label>
+    <input [(ngModel)]="content.title" type="text" required>
+  </div>
+  <div>
+    <label>Description:</label>
+    <input [(ngModel)]="content.description" type="text" required>
+  </div>
+  <div>
+    <label>Creator:</label>
+    <input [(ngModel)]="content.creator" type="text" required>
+  </div>
+  <div>
+    <label>Image URL:</label>
+    <input [(ngModel)]="content.imgUrl" type="text">
+  </div>
+  <div>
+    <label>Type:</label>
+    <input [(ngModel)]="content.type" type="text">
+  </div>
+  <div>
+    <label>Tags:</label>
+    <input [(ngModel)]="content.tags" type="text">
+  </div>
+
+  <button id="buttonSubmit" (click)="onSubmit()">Submit</button>
+  <p [style.color]="'red'" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <br><br>
+
+

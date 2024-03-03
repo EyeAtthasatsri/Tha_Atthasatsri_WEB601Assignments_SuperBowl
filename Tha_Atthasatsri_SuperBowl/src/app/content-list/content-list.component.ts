@@ -8,19 +8,28 @@ import { ContentCardComponent } from '../content-card/content-card.component';
 import { ContentTypeFilterPipe } from '../content-type-filter.pipe';
 import { FormsModule } from '@angular/forms';
 
-  // ---------------- end ass 4
+  // ---------------- Add ass 4
 
   import { HoverAffectDirective } from '../hover-affect.directive';
 
-  // ---------------- Add ass 4
+  // ---------------- end ass 4
+
+
+ // ---------------- Add ass 5
+
+  import { CreateContentComponent } from '../create-content/create-content.component';
+
+  // ---------------- end ass 5
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule, HoverAffectDirective],
+  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule, HoverAffectDirective, CreateContentComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
+
+
 export class ContentListComponent implements OnInit{
 
   // Add cursor showm when users touch.
@@ -132,4 +141,12 @@ export class ContentListComponent implements OnInit{
       }
     ]
   }
+
+  // Add from Ass 4 
+  onContentCreated(newContent: any) {
+    this.contentItems.unshift({ ...newContent }); // Clone the content
+  }
+
+  // end ass 4
+
 }
