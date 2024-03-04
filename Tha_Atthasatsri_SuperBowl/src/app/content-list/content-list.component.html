@@ -2,7 +2,7 @@
 <br>
 
 
-<!-- Ass 4 -->
+<!-- Ass 5 -->
 
 <div>
     <input [(ngModel)]="searchTitle" placeholder="Enter Content Title" />
@@ -27,12 +27,12 @@
 <!-- ------------------------------ -->
 
 <!-- Ass 3 -->
-<!-- <input type="text" [(ngModel)]="searchTitle" placeholder="Enter title"> -->
-<!-- <button (click)="checkContentExists()">Check Existence</button> -->
+<input type="text" [(ngModel)]="searchTitle" placeholder="Enter title">
+ <button (click)="checkContentExists()">Check Existence</button>
 
 
 <!-- Display search result message -->
-<!-- <p [ngStyle]="{'color': contentExists ? 'green' : 'red'}">{{ message }}</p>
+<p [ngStyle]="{'color': contentExists ? 'green' : 'red'}">{{ message }}</p>
 
 
 <h1>American football</h1>
@@ -42,7 +42,8 @@
 <app-content-card *ngFor="let contentItem of contentItems | contentTypeFilter: 'National Football'" [contentItem]="contentItem"></app-content-card>
 
 <h2>Empty as No set</h2>
-<app-content-card *ngFor="let contentItem of contentItems | contentTypeFilter: ' '" [contentItem]="contentItem"></app-content-card> -->
+<app-content-card *ngFor="let contentItem of contentItems | contentTypeFilter: ' '" [contentItem]="contentItem"></app-content-card>
+
 
 <!-- ------------------------------ -->
 

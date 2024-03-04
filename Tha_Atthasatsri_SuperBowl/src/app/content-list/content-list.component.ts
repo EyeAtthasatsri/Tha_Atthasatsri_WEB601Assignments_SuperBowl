@@ -142,8 +142,9 @@ export class ContentListComponent implements OnInit{
     ]
   }
 
-  // Add from Ass 4 
+  // Add from Ass 5 
   onContentCreated(newContent: any) {
+    console.log("New content that was added: ", newContent);
     this.contentItems.unshift({ ...newContent }); // Clone the content
   }
 
