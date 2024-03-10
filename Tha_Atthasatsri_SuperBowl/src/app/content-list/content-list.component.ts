@@ -1,6 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { Content } from '../helper-files/content-interface';
+
+  // ---------------- end ass 6
+
+  // import { Content } from '../helper-files/content-interface';
+  import { Content } from '../helper-files/contentDb';
+
+  // ---------------- Add ass 6
+
+
 
   // ---------------- Add ass3
 
@@ -13,6 +21,8 @@ import { FormsModule } from '@angular/forms';
   import { HoverAffectDirective } from '../hover-affect.directive';
 
   // ---------------- Add ass 4
+
+ 
 
 @Component({
   selector: 'app-content-list',
