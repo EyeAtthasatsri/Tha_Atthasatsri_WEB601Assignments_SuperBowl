@@ -1,0 +1,35 @@
+.messages-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .messages-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .clear {
+    background-color: aquamarine;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 0px;
+  }
+  
+  .clear:hover {
+    background-color: #f102be;
+    color: white;
+  }
+
+  
+  .message {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+ 
+ 

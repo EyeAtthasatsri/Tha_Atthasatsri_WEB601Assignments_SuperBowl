@@ -37,9 +37,8 @@ button{
   background-color: aquamarine;
   padding: 5px 10px;
   border: 0px;
-  outline: none;
-  transform: none;
-  // transition: all 0.3s ease-in;
+  cursor: pointer;
+  
 }
 button:hover{
   // transform: scale(1.1);

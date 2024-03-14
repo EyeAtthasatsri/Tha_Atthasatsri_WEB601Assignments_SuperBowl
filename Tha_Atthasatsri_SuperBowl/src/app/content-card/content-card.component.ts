@@ -16,13 +16,13 @@ import { HoverAffectDirective } from '../hover-affect.directive';
 
 export class ContentCardComponent {
   @Input() contentItem : any;
+
+  // Ass 6 
+  @Input() item:any;
   
+  // ------------------
   // effectBold = 'bold'
-
-  
   // contentList: Contentlist = new Contentlist();
-
-  
 
   // constructor() {
   //   this.contentList.addContent({
