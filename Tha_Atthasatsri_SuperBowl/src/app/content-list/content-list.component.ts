@@ -76,6 +76,8 @@ export class ContentListComponent implements OnInit{
   // Ass 6
 
   constructor (private SuperBService:SuperBowlService, private MessageService:MessageService){ }
+  
+  
   ngOnInit() {
 
     

@@ -1,19 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, numberAttribute } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ContentListComponent } from './content-list/content-list.component';
 // import { ContentCardComponent } from './content-card/content-card.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SuperBowlService } from './services/super-bowl.service';
+import { MessageService } from './message.service';
+import { ContentCardComponent } from './content-card/content-card.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ContentListComponent, MessagesComponent],
+  imports: [CommonModule, RouterOutlet, ContentListComponent, MessagesComponent,ContentCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Super Bowl Game';
+
+
+  // <-- Ass 6 -->
+
+  items:any;
+
+  constructor(private SuperBService: SuperBowlService, private MessageService: MessageService) { }
+
+  ngOnInit() {
+    // Fetch data when component is initialized
+    this.getContentById(5);
+  }
+  
+  getContentById(num: number) {
+    // return this.SuperBService.getContentById(4).subscribe(content=> this.items = content);
+    this.SuperBService.getContentById(num).subscribe(content => {
+      this.items = content;
+    });
+  }
+
+
+  // <-- End 6 -->  
 
   // contentList = [
   //   {
@@ -62,4 +88,5 @@ export class AppComponent {
   //     tags: "NFL" 
   //   }
   // ]
+
 }
