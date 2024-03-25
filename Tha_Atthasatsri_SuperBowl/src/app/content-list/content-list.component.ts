@@ -23,12 +23,18 @@ import { FormsModule } from '@angular/forms';
 
   // ---------------- end ass 6
 
+  // ---------------- Add ass 7
+
+  import { ModifyContentComponent } from '../modify-content/modify-content.component';
+  // ---------------- end ass 7
+
+
  
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule, HoverAffectDirective],
+  imports: [CommonModule, ContentCardComponent, ContentTypeFilterPipe, FormsModule, HoverAffectDirective, ModifyContentComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })

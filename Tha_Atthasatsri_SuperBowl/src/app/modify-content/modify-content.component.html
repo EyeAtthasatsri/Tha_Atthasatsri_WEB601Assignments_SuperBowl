@@ -1,0 +1,44 @@
+<p>modify-content works!</p>
+
+<!-- modify-content.component.html -->
+
+<div>
+    <h2>Add New Content</h2>
+    <form>
+      <label>Title: </label>
+      <input type="text" [(ngModel)]="newContent.title" name="title" required>
+  
+      <label>Description: </label>
+      <input type="text" [(ngModel)]="newContent.description" name="description" required>
+  
+      <label>Creator: </label>
+      <input type="text" [(ngModel)]="newContent.creator" name="creator" required>
+  
+      <label>Image URL: </label>
+      <input type="text" [(ngModel)]="newContent.imgUrl" name="imgUrl">
+  
+      <label>Type: </label>
+      <input type="text" [(ngModel)]="newContent.type" name="type">
+  
+      <label>Tags: </label>
+      <input type="text" [(ngModel)]="newContent.tags" name="tags">
+  
+      <button type="button" (click)="addContent(); contentForm.resetForm()">Add Content</button>
+
+    </form>
+  </div>
+
+
+<!-- modify-content.component.html -->
+<!-- <div>
+    <label>Title:</label>
+    <input type="text" [(ngModel)]="newContent.title">
+  </div>
+  <div>
+    <label>Description:</label>
+    <input type="text" [(ngModel)]="newContent.description">
+  </div> -->
+  
+  
+  <!-- Add input fields for other properties (creator, imgUrl, type, tags) -->
+  <!-- <button (click)="addContent()">Add Content</button> -->
