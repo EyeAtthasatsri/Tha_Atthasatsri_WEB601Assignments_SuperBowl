@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 
@@ -56,7 +56,9 @@ export class ContentListComponent implements OnInit{
    @Input() items:Content[] = [];
 
 
+  // ---------------- Add ass 7
 
+  @Output() contentAdded: EventEmitter<Content> = new EventEmitter<Content>(); // Event emitter for adding content 
    
   // ---------------- Add ass3
 
@@ -68,6 +70,14 @@ export class ContentListComponent implements OnInit{
   id:any;
   selectedContent?: Content;
 
+  newContent: Content = {
+    title: '',
+    description: '',
+    creator: '',
+    imgUrl: '',
+    type: '',
+    tags: []
+  };
 
   checkContentExists() {
     const foundItem = this.contentItems.find(item => item.title.toLowerCase() === this.searchTitle.toLowerCase());
@@ -100,5 +110,28 @@ export class ContentListComponent implements OnInit{
   }
 
   // end Ass 6
+
+
+  // -------------------------------------------
+
+// Assignment 7 
+// @Output() contentAdded: EventEmitter<Content> = new EventEmitter<Content>(); 
+// Event emitter for adding content
+  addContent() {
+    this.SuperBService.addContent(this.newContent).subscribe(newContent => {
+      this.contentAdded.emit(newContent); // Emit event after content is successfully added
+      this.MessageService.add('Content added successfully'); // Display message
+      this.newContent = { // Clear input fields
+        title: '',
+        description: '',
+        creator: '',
+        imgUrl: '',
+        type: '',
+        tags: []
+      };
+    });
+  }
+
+// -------------------------------------------
   
 }

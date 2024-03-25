@@ -17,7 +17,7 @@ export class SuperBowlService {
   // Assignment 7 
 
   // Assuming your in-memory server base URL is 'api/content'
-  private apiUrl = 'api/CONTENT'; // Endpoint for content API
+  private apiUrl = 'api/content'; // Endpoint for content API
 
   constructor(
     private http: HttpClient,
@@ -26,6 +26,10 @@ export class SuperBowlService {
 
     addContent(content: Content): Observable<Content> {
       return this.http.post<Content>(this.apiUrl, CONTENT); 
+    }
+
+    getContent() : Observable<Content[]>{
+      return this.http.get<Content[]>("api/content");
     }
 
   //  End of Ass 7
