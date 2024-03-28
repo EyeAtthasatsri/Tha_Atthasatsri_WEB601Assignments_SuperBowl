@@ -9,11 +9,11 @@ import { MessageService } from './message.service';
 import { ContentCardComponent } from './content-card/content-card.component';
 
 // Assignment 7
+import { HttpClient} from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { ModifyContentComponent } from './modify-content/modify-content.component';
-
 
 @Component({
   selector: 'app-root',
@@ -27,12 +27,6 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
     ModifyContentComponent,
     HttpClientModule,
     HttpClientInMemoryWebApiModule
-
-    // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-    //   dataEncapsulation: false,
-    //   delay: 1000,
-    // });
-
   ],
 
   templateUrl: './app.component.html',

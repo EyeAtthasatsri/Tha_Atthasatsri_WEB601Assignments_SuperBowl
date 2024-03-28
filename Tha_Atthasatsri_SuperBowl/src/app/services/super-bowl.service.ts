@@ -4,14 +4,18 @@ import { CONTENT } from '../helper-files/contentDb';
 import { Observable, of } from 'rxjs';
 import { MessageService } from '../message.service';
 
+
 // Assignment 7 
 // content.service.ts
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
+
 })
+
+
 export class SuperBowlService {
 
   // Assignment 7 

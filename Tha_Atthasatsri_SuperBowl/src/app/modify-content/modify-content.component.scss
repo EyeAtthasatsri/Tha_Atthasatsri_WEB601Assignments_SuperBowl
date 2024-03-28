@@ -1,0 +1,39 @@
+/* modify-content.component.css */
+
+form {
+    margin: 20;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 100%;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #f102be;
+  }
+
+
+  
