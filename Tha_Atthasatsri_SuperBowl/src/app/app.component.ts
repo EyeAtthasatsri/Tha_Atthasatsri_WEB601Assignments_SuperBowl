@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { ModifyContentComponent } from './modify-content/modify-content.component';
+import { Content } from './helper-files/content-interface';
+
 
 @Component({
   selector: 'app-root',
@@ -36,6 +38,7 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
 export class AppComponent implements OnInit {
   title = 'Super Bowl Game';
 
+  
 
   // <-- Ass 6 -->
 
