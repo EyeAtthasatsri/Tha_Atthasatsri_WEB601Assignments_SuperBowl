@@ -1,4 +1,4 @@
-import { Component, OnInit, numberAttribute } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ContentListComponent } from './content-list/content-list.component';
@@ -9,13 +9,19 @@ import { MessageService } from './message.service';
 import { ContentCardComponent } from './content-card/content-card.component';
 
 // Assignment 7
-import { HttpClient} from '@angular/common/http';
+// import { HttpClient} from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/in-memory-data.service';
+// import { InMemoryDataService } from './services/in-memory-data.service';
 import { ModifyContentComponent } from './modify-content/modify-content.component';
-import { Content } from './helper-files/content-interface';
+// import { Content } from './helper-files/content-interface';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import {MatButtonModule} from'@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon'; // import if you're using icons
 
 @Component({
   selector: 'app-root',
@@ -28,11 +34,20 @@ import { Content } from './helper-files/content-interface';
     ContentCardComponent,
     ModifyContentComponent,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule
+    HttpClientInMemoryWebApiModule,
+
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
   ],
 
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  
+  
 })
 
 export class AppComponent implements OnInit {

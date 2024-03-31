@@ -1,8 +1,54 @@
 <!-- <p>modify-content works!</p> -->
 
 <!-- modify-content.component.html -->
+<!-- Ass 8 -->
 
 <div>
+  <h2>Add New Content</h2>
+  <form #contentForm="ngForm">
+    <mat-form-field>
+      <mat-label>Title:</mat-label>
+      <input matInput [(ngModel)]="newContent.title" name="title" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description:</mat-label>
+      <input matInput [(ngModel)]="newContent.description" name="description" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Creator:</mat-label>
+      <input matInput [(ngModel)]="newContent.creator" name="creator" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Image URL:</mat-label>
+      <input matInput [(ngModel)]="newContent.imgUrl" name="imgUrl">
+    </mat-form-field>
+
+    <mat-form-field>
+  <mat-label>Type:</mat-label>
+  <mat-select [(ngModel)]="newContent.type" name="type">
+    <mat-option *ngFor="let type of contentTypes" [value]="type">{{ type }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tags:</mat-label>
+      <input matInput [(ngModel)]="newContent.tags" name="tags">
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary" (click)="openDialog()">Add Content</button>
+    <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>  </form>
+</div>
+
+
+
+
+<!-- ---------------------------- -->
+<!-- Ass 7 -->
+<!-- <div>
   <h2>Add New Content</h2>
   <form #contentForm="ngForm">
     <label>Title: </label>
@@ -25,7 +71,7 @@
 
     <button type="button" (click)="addContent(); contentForm.resetForm()">Add Content</button>
   </form>
-</div>
+</div> -->
 
 <!-- modify-content.component.html -->
 <!-- <div>

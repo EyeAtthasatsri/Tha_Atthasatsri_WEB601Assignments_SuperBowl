@@ -1,3 +1,29 @@
+<!-- Ass 8 -->
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><strong>Title:</strong> {{ contentItem.title }}</mat-card-title>
+    <mat-card-subtitle><strong>Creator:</strong> {{ contentItem.creator }}</mat-card-subtitle>
+  
+  </mat-card-header><br/>
+    
+      <img mat-card-image [src]="contentItem.imgUrl" alt="{{ contentItem.title }}" class="content-card-image"  width="200px">
+    
+  <mat-card-content>
+    <p><strong>Description:</strong> {{ contentItem.description }}</p>
+    <p><strong>Type:</strong>  {{ contentItem.type }}</p>
+    <p><strong>Tags:</strong>  {{ contentItem.tags.join(', ') }}</p>
+  </mat-card-content>
+</mat-card>
+
+
+
+
+
+
+
+<!-- ----------------------------------------------- -->
+
 <!-- <div>
     <div>
         @for(Items of contentList.Items; track Items.id; let i = $index){
@@ -10,16 +36,16 @@
 
 <!-- Ass4 -->
 
-  <div class="content-card" [ngClass]="{
+  <!-- <div class="content-card" [ngClass]="{
     'national football': contentItem.type === 'National football',
     'american football': contentItem.type === 'American football',
     'unspecified': !contentItem.type}">
-    
+     -->
     
 
     <!--  Add ngIf & set Defaut image -->
 
-    <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl; else defaultImage" alt="{{ contentItem.title }}" class="content-card-image" height="200px">
+    <!-- <img [src]="contentItem.imgUrl" *ngIf="contentItem.imgUrl; else defaultImage" alt="{{ contentItem.title }}" class="content-card-image" height="200px">
     
 
     <ng-template #defaultImage>
@@ -44,9 +70,8 @@
           
           </p>
           
-          <!-- <p *ngFor="let tag of contentItem.tags" appHoverAffect [affectType]="'bold'"><strong>Tags: </strong>{{ tag }}</p> -->
             
-  </div>
+  </div> -->
 
 <!-- End Ass4 -->
 

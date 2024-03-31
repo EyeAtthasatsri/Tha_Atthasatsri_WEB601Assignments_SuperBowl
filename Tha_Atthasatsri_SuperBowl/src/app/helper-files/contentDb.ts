@@ -71,7 +71,7 @@ export const CONTENT = [
         title: "Super Bowl (2016)",
         description: "Super Bowl 50",
         creator:"CBS ESPN Deportes",
-        // imgUrl:" ", is not set
+        imgUrl:"https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Super_Bowl_50_Logo.svg/360px-Super_Bowl_50_Logo.svg.png",
         type:"American football", // different Type value as no set
         tags: ["National Football League","American Football Conference"]
     }
