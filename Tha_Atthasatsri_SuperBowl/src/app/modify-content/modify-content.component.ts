@@ -20,7 +20,6 @@ import { MatOptionModule } from '@angular/material/core';
   imports: [FormsModule, MatFormFieldModule, MatOptionModule],
   templateUrl: './modify-content.component.html',
   styleUrl: './modify-content.component.scss'
-
 })
 export class ModifyContentComponent {
 
