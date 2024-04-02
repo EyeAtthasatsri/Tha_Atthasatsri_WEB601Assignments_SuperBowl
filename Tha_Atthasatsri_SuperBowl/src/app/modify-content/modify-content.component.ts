@@ -11,13 +11,14 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddContentDialogComponent } from '../add-content-dialog/add-content-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
 @Component({
   selector: 'app-modify-content',
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatOptionModule],
+  imports: [FormsModule, MatFormFieldModule, MatOptionModule, MatButtonModule],
   templateUrl: './modify-content.component.html',
   styleUrl: './modify-content.component.scss'
 })
@@ -43,11 +44,10 @@ export class ModifyContentComponent {
   // contentForm: any;
 
 constructor(
-  private superBowlService: SuperBowlService,
-  private MessageService: MessageService,
+  // private superBowlService: SuperBowlService,
+  // private MessageService: MessageService,
   private dialog:MatDialog) { }
 
-  // Ass 8
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddContentDialogComponent, {
@@ -57,21 +57,35 @@ constructor(
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.addContent(result);
       }
     });
-  }
 
-  addContent(content: Content): void {
-    this.superBowlService.addContent(content).subscribe(() => {
-      console.log('Content added successfully');
-      this.dialog.closeAll();
-    });
-  }
+  // Ass 8
 
-  cancel(): void {
-    this.dialog.closeAll();
-  }
+
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(AddContentDialogComponent, {
+  //     width: '400px',
+  //     data: this.newContent
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result) {
+  //       this.addContent(result);
+  //     }
+  //   });
+  // }
+
+  // addContent(content: Content): void {
+  //   this.superBowlService.addContent(content).subscribe(() => {
+  //     console.log('Content added successfully');
+  //     this.dialog.closeAll();
+  //   });
+  // }
+
+  // cancel(): void {
+  //   this.dialog.closeAll();
+  // }
 
   // ------------------------------
   // addContent() {
@@ -102,6 +116,6 @@ constructor(
 
 
 
-
+  }
 
 }
